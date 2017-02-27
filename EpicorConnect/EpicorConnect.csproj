@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1494C728-74CD-4E57-AFCA-F433695819BB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EpicorConnect</RootNamespace>
+    <AssemblyName>EpicorConnect</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Epicor.Ice.Version">
+      <HintPath>..\..\Epicor.Ice.Version.dll</HintPath>
+    </Reference>
+    <Reference Include="Epicor.ServiceModel">
+      <HintPath>..\..\Epicor.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="EpicorConnection">
+      <HintPath>..\..\dllEpicorConnect\wMesaControl\bin\x64\Release\EpicorConnection.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Adapters.Customer">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.0ClientTest\Client\Erp.Adapters.Customer.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Adapters.PO">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.0ClientTest\Client\Erp.Adapters.PO.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Common.ContractInterfaces">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.0ClientTest\Client\Erp.Common.ContractInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Lib.Configurator">
+      <HintPath>..\..\Erp.Lib.Configurator.dll</HintPath>
+    </Reference>
+    <Reference Include="Erp.Lib.GlobalStrings">
+      <HintPath>..\..\Erp.Lib.GlobalStrings.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Adapters.UD01">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.0ClientTest\Client\Ice.Adapters.UD01.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Adapters.UserFile">
+      <HintPath>..\..\Ice.Adapters.UserFile.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Contracts.BO.UD01">
+      <HintPath>..\..\..\..\..\..\..\Epicor\ERP10.0ClientTest\Client\Ice.Contracts.BO.UD01.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Contracts.BO.UserFile">
+      <HintPath>..\..\Ice.Contracts.BO.UserFile.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Core.Session">
+      <HintPath>..\..\Ice.Core.Session.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Core.Version">
+      <HintPath>..\..\Ice.Core.Version.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Lib.AppSettingsHandler">
+      <HintPath>..\..\Ice.Lib.AppSettingsHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Ice.Lib.EpiClientLib">
+      <HintPath>..\..\Ice.Lib.EpiClientLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Credenciales.cs" />
+    <Compile Include="Patern.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
